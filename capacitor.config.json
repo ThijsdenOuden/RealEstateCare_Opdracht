@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+    "appName": "vue-project-loi",
+      "bundledWebRuntime": false,
+        "npmClient": "npm",
+          "webDir": "dist",
+            "plugins": {
+    "SplashScreen": {
+      "LaunchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
