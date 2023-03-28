@@ -1,0 +1,120 @@
+#contentSlot {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcomeLogo {
+	inline-size: 100vw;
+    margin: 2% 0 0 0;
+}
+
+#menuLayout {
+    box-sizing: border-box;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    inline-size: 70vw;
+    aspect-ratio: 1/1;
+    margin: 7em 0 0 0;
+    rotate: 45deg;
+}
+
+.menuKnop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#t-rapport {
+    border-top: 5px solid var(--accent-color);
+    border-left: 5px solid var(--accent-color);
+    border-bottom: 1px solid rgba(0,170,162, 0.1);
+    border-right: 1px solid rgba(0,170,162, 0.1);
+}
+
+#u-rapport {
+    border-top: 5px solid var(--accent-color);
+    border-right: 5px solid var(--accent-color);
+    border-bottom: 1px solid rgba(0,170,162, 0.1);
+    border-left: 1px solid rgba(0,170,162, 0.1);
+}
+
+#kennisbase {
+    border-top: 1px solid rgba(0,170,162, 0.1);
+    border-right: 1px solid rgba(0,170,162, 0.1);
+    border-bottom: 5px solid var(--accent-color);
+    border-left: 5px solid var(--accent-color);
+}
+
+#instellingen {
+    border-top: 1px solid rgba(0,170,162, 0.1);
+    border-right: 5px solid var(--accent-color);
+    border-bottom: 5px solid var(--accent-color);
+    border-left: 1px solid rgba(0,170,162, 0.1);
+}
+
+#v-line{
+    position: absolute;
+    border-top: 6px solid var(--accent-color);
+    border-left: 6px solid var(--accent-color);
+    inline-size: 25%;
+    aspect-ratio: 1/1;
+    margin: 25% 0 0 50%;
+}
+
+.menuTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    rotate: -45deg;
+    margin: 20% 0 0 20%;
+}
+.menuIcon {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--accent-color);
+    rotate: -45deg;
+    margin: 0 25% 25% 0;
+}
+
+ion-toolbar {
+	--background: var(--colorfade-primary);
+    --color: var(--accent-color);
+	text-align: center;
+}
+
+ion-content {
+	--background: var(--accent-dark);
+    block-size: 100%;
+}
+
+ion-title {
+    font-weight: bold;
+}
+
+ion-footer {
+    block-size: 7%;
+}
+
+#footerToolbar {
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+#footerButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerIcons {
+    font-size: 2.25rem;
+}

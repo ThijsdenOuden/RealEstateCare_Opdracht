@@ -6,8 +6,23 @@
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <slot/>
+            <slot />
         </ion-content>
+        <ion-footer>
+            <ion-toolbar id="footerToolbar">
+                <ion-buttons id="footerButtons">
+                    <ion-button>
+                        <ion-icon class="footerIcons" name="home-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button>
+                        <ion-icon class="footerIcons" name="person-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button>
+                        <ion-icon class="footerIcons" name="cog-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-footer>
     </ion-page>
 </template>
 
@@ -17,17 +32,25 @@ import {
     IonHeader,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    IonFooter,
+    IonButtons,
+    IonButton,
+    IonIcon
 } from '@ionic/vue';
 
 export default {
     props: ['pageTitle'],
     components: {
-    IonPage,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent
+        IonPage,
+        IonHeader,
+        IonToolbar,
+        IonTitle,
+        IonContent,
+        IonFooter,
+        IonButtons,
+        IonButton,
+        IonIcon
     }
 }
 </script>
