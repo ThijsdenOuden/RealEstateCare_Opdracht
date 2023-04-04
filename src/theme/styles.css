@@ -126,6 +126,15 @@ ion-footer {
     padding: 0.5em;
 }
 
+.reportList {
+    list-style: none;
+    padding: 0;
+}
+
+.reportListSub {
+    list-style: none;
+}
+
 @media screen and (min-width: 600px) {
     #menuLayout {
         inline-size: 50%;
@@ -141,7 +150,6 @@ ion-footer {
         margin: 1em auto;
         padding: 0;
         max-inline-size: 50%;
-        max-block-size: 5em;
     }
 
     .reportCardHeader {
