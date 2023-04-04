@@ -3,10 +3,10 @@ import homePage from '../pages/homePage.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/first'
+    redirect: '/home'
   },
   {
-    path: '/first',
+    path: '/home',
     component: homePage
   }
 ]

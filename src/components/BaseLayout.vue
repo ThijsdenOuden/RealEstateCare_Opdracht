@@ -6,7 +6,7 @@
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <slot />
+            <slot/>
         </ion-content>
         <ion-footer>
             <ion-toolbar id="footerToolbar">

@@ -1,0 +1,274 @@
+{
+    "reports": [
+        {
+            "id": 1,
+            "date": "2023-02-14 13:43:10.000",
+            "property_location": "Lavendeldreef 3, Harmelen",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "douche",
+                        "dam_new_damage": true,
+                        "dam_kind_of_damage": "anders",
+                        "dam_date_time": "2023-02-13 15:01:44.000",
+                        "dam_needs_action": true,
+                        "dam_description": "Waterschade bij de douche"
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "master slaapkamer",
+                        "main_kind_of_maintenance": "Verven",
+                        "main_needs_action": false,
+                        "main_cost_indication": "0-500"
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "cv ketel beneden",
+                        "tech_installation_type": "cv-ketel",
+                        "tech_reported_malfunction": "waakvlam is uit",
+                        "tech_test_procedure": "testwaakvlam.pdf",
+                        "tech_approved": true,
+                        "tech_remark": "Werkt weer"
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "modificaties.pdf",
+                        "mod_location": "woonkamer",
+                        "mod_carried_out_by": "Aannemer",
+                        "mod_modification_type": "Stekkers 75cm naar beneden halen en in de muur frezen",
+                        "mod_action": "Laten keuren",
+                        "mod_remark": "Goed gekeurd"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "date": "2023-03-23 09:23:23.000",
+            "property_location": "Patrimoniumweg 87, Ens",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "voordeur",
+                        "dam_new_damage": true,
+                        "dam_kind_of_damage": "normaal gebruik",
+                        "dam_date_time": "2023-03-14 18:38:48.502",
+                        "dam_needs_action": true,
+                        "dam_description": "Slot vervangen van voordeur"
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "",
+                        "main_kind_of_maintenance": "",
+                        "main_needs_action": false,
+                        "main_cost_indication": ""
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "",
+                        "tech_installation_type": "",
+                        "tech_reported_malfunction": "",
+                        "tech_test_procedure": "",
+                        "tech_approved": false,
+                        "tech_remark": ""
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "",
+                        "mod_location": "",
+                        "mod_carried_out_by": "",
+                        "mod_modification_type": "",
+                        "mod_action": "",
+                        "mod_remark": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "date": "2022-08-10 12:45:11.000",
+            "property_location": "Binnensingel 45, Den Bosch",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "slaapkamer",
+                        "dam_new_damage": true,
+                        "dam_kind_of_damage": "normaal gebruik",
+                        "dam_date_time": "2022-07-29 20:33:48.502",
+                        "dam_needs_action": true,
+                        "dam_description": "nieuw raam installeren"
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "",
+                        "main_kind_of_maintenance": "",
+                        "main_needs_action": false,
+                        "main_cost_indication": ""
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "zolder",
+                        "tech_installation_type": "cv-ketel",
+                        "tech_reported_malfunction": "lekt",
+                        "tech_test_procedure": "cvketellek.pdf",
+                        "tech_approved": true,
+                        "tech_remark": "bout aangedraaid en opgelost"
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "",
+                        "mod_location": "",
+                        "mod_carried_out_by": "",
+                        "mod_modification_type": "",
+                        "mod_action": "",
+                        "mod_remark": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "date": "2022-09-02 16:45:58.000",
+            "property_location": "Meester van Damweg 88, Radio Kootwijk",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "",
+                        "dam_new_damage": false,
+                        "dam_kind_of_damage": "",
+                        "dam_date_time": "",
+                        "dam_needs_action": false,
+                        "dam_description": ""
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "Benedenverdieping",
+                        "main_kind_of_maintenance": "schilderwerk",
+                        "main_needs_action": true,
+                        "main_cost_indication": "500-1500"
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "",
+                        "tech_installation_type": "",
+                        "tech_reported_malfunction": "",
+                        "tech_test_procedure": "",
+                        "tech_approved": false,
+                        "tech_remark": ""
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "",
+                        "mod_location": "",
+                        "mod_carried_out_by": "",
+                        "mod_modification_type": "",
+                        "mod_action": "",
+                        "mod_remark": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "date": "2022-07-29 11:11:45.630",
+            "property_location": "Zenvenwegenlaan 43, Delft",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "",
+                        "dam_new_damage": false,
+                        "dam_kind_of_damage": "",
+                        "dam_date_time": "",
+                        "dam_needs_action": false,
+                        "dam_description": ""
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "",
+                        "main_kind_of_maintenance": "",
+                        "main_needs_action": false,
+                        "main_cost_indication": ""
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "",
+                        "tech_installation_type": "",
+                        "tech_reported_malfunction": "",
+                        "tech_test_procedure": "",
+                        "tech_approved": false,
+                        "tech_remark": ""
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "geen",
+                        "mod_location": "benedenverdieping",
+                        "mod_carried_out_by": "Aannemer",
+                        "mod_modification_type": "nieuwe raam kozijnen",
+                        "mod_action": "Laten keuren",
+                        "mod_remark": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "date": "2023-01-12 12:00:06.000",
+            "property_location": "Bovenbuurtweg 7,Overasselt",
+            "report": [
+                {
+                    "damage_reports": {
+                        "dam_location": "",
+                        "dam_new_damage": false,
+                        "dam_kind_of_damage": "",
+                        "dam_date_time": "",
+                        "dam_needs_action": false,
+                        "dam_description": ""
+                    }
+                },
+                {
+                    "maintenance": {
+                        "main_location": "bovenverdieping",
+                        "main_kind_of_maintenance": "Leidingwerk",
+                        "main_needs_action": true,
+                        "main_cost_indication": "500-1500"
+                    }
+                },
+                {
+                    "technical_installations": {
+                        "tech_location": "",
+                        "tech_installation_type": "",
+                        "tech_reported_malfunction": "",
+                        "tech_test_procedure": "",
+                        "tech_approved": false,
+                        "tech_remark": ""
+                    }
+                },
+                {
+                    "modifications": {
+                        "mod_documented_modifications": "",
+                        "mod_location": "",
+                        "mod_carried_out_by": "",
+                        "mod_modification_type": "",
+                        "mod_action": "",
+                        "mod_remark": ""
+                    }
+                }
+            ]
+        }
+    ]
+}

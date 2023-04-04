@@ -1,12 +1,12 @@
 #contentSlot {
 	display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    block-size: 100%;
 }
 
 #welcomeLogo {
-	inline-size: 100vw;
+	inline-size: 90vw;
     margin: 2% 0 0 0;
 }
 
@@ -16,9 +16,9 @@
     grid-template: 1fr / 1fr 1fr;
     justify-content: center;
     align-items: center;
-    inline-size: 70vw;
+    inline-size: 70%;
     aspect-ratio: 1/1;
-    margin: 7em 0 0 0;
+    margin: auto 0;
     rotate: 45deg;
 }
 
@@ -31,6 +31,10 @@
     color: white;
     text-align: center;
     position: relative;
+}
+
+#t-rapport:hover, #u-rapport:hover, #kennisbase:hover, #instellingen:hover {
+    background: var(--accent-color);
 }
 
 #t-rapport {
@@ -107,7 +111,6 @@ ion-footer {
     block-size: 100%;
     display: flex;
     align-items: center;
-
 }
 
 #footerButtons {
@@ -117,4 +120,31 @@ ion-footer {
 
 .footerIcons {
     font-size: 2.25rem;
+}
+
+.reportCardHeader {
+    padding: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+    #menuLayout {
+        inline-size: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #menuLayout {
+        inline-size: 25%;
+    }
+
+    .reportCard {
+        margin: 1em auto;
+        padding: 0;
+        max-inline-size: 50%;
+        max-block-size: 5em;
+    }
+
+    .reportCardHeader {
+        padding: 0 0 0 1.5em;
+    }
 }
