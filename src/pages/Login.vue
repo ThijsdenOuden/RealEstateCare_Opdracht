@@ -52,9 +52,13 @@ export default {
     },
     methods: {
         async login() {
-            const result = await axios.get(
-                `http://localhost:3000/accounts?username=${this.username}&password=${this.password}`
-            )
+            const url = `https://api.jsonbin.io/v3/b/646395fb8e4aa6225e9e4711/latest/acounts?username=${this.username}&password=${this.password}`;
+            const headers = {
+                'Content-Type': 'application/json',
+                'X-Master-Key': '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq'
+            };
+
+            const result = await axios.get(url, { headers });
             if (result.status == 200 && result.data.length > 0) {
                 const randomNumber = Math.floor(Math.random() * (100000 - 10000)) + 10000;
                 console.log(randomNumber);
