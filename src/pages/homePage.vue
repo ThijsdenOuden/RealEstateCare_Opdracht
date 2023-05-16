@@ -1,42 +1,48 @@
 <template>
-    <show-Data></show-Data>
-    <!-- <img id="welcomeLogo" src="../theme/Logo/logo_name.png" alt="logo"> -->
-    <!-- <base-layout page-title="Home">
+    <base-layout page-title="Home">
+        <img id="logo" src="../theme/Logo/logo_full.png" alt="logo">
         <div id="contentSlot">
             <section id="menuLayout">
-                <div class="menuKnop" id="t-rapport">
-                    <ion-icon class="menuIcon" name="reader-outline"></ion-icon>
-                    <h3 class="menuTitle">Toegewezen <br> rapportages</h3>
-                </div>
-                <div class="menuKnop" id="u-rapport">
-                    <ion-icon class="menuIcon" name="checkmark-outline"></ion-icon>
-                    <h3 class="menuTitle">Uitgevoerde <br> rapportages</h3>
-                </div>
-                <div class="menuKnop" id="kennisbase">
-                    <ion-icon class="menuIcon" name="server-outline"></ion-icon>
-                    <h3 class="menuTitle">Documentatie</h3>
-                </div>
-                <div class="menuKnop" id="instellingen">
-                    <ion-icon class="menuIcon" name="cog-outline"></ion-icon>
-                    <h3 class="menuTitle">Instellingen</h3>
-                </div>
+                <router-link to="/performedReports">
+                    <div class="menuBtn" id="p-report">
+                        <ion-icon class="menuIcon" name="checkmark-outline"></ion-icon>
+                        <h3 class="menuTitle">Uitgevoerd</h3>
+                    </div>
+                </router-link>
+                <router-link to="/settings">
+                    <div class="menuBtn" id="settings">
+                        <ion-icon class="menuIcon" name="cog-outline"></ion-icon>
+                        <h3 class="menuTitle">Instellingen</h3>
+                    </div>
+                </router-link>
+                <router-link to="/AssignedReports">
+                    <div class="menuBtn" id="a-report">
+                        <ion-icon class="menuIcon" name="today-outline"></ion-icon>
+                        <h3 class="menuTitle">Toegewezen</h3>
+                    </div>
+                </router-link>
+                <router-link to="/databaseDocs">
+                    <div class="menuBtn" id="database">
+                        <ion-icon class="menuIcon" name="server-outline"></ion-icon>
+                        <h3 class="menuTitle">Documenten</h3>
+                    </div>
+                </router-link>
+                
                 <div id="v-line"></div>
             </section>
         </div>
-    </base-layout> -->
-
+    </base-layout>
 </template>
 
 <script>
 import {
-        // IonIcon
+    IonIcon
 } from '@ionic/vue';
-import showData from '../components/showData.vue';
 
 export default {
+    name: 'HomePage',
     components: {
-        showData,
-        // IonIcon
+        IonIcon
     }
-};
+}
 </script>

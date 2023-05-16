@@ -1,25 +1,31 @@
 <template>
     <ion-page>
         <ion-header>
-            <ion-toolbar>
+            <ion-toolbar class="header">
                 <ion-title>{{ pageTitle }}</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <slot/>
+            <slot />
         </ion-content>
         <ion-footer>
             <ion-toolbar id="footerToolbar">
                 <ion-buttons id="footerButtons">
-                    <ion-button>
-                        <ion-icon class="footerIcons" name="home-outline"></ion-icon>
-                    </ion-button>
-                    <ion-button>
-                        <ion-icon class="footerIcons" name="person-outline"></ion-icon>
-                    </ion-button>
-                    <ion-button>
-                        <ion-icon class="footerIcons" name="cog-outline"></ion-icon>
-                    </ion-button>
+                    <router-link to="/account">
+                        <ion-icon
+                          class="footerIcons"
+                          name="person-outline"></ion-icon>
+                    </router-link>
+                    <router-link to="/">
+                        <ion-icon
+                          class="footerHome"
+                          name="home"></ion-icon>
+                    </router-link>
+                    <router-link to="/settings">
+                        <ion-icon
+                          class="footerIcons"
+                          name="cog-outline"></ion-icon>
+                    </router-link>
                 </ion-buttons>
             </ion-toolbar>
         </ion-footer>
@@ -35,12 +41,13 @@ import {
     IonToolbar,
     IonFooter,
     IonButtons,
-    IonButton,
     IonIcon
 } from '@ionic/vue';
 
 export default {
-    props: ['pageTitle'],
+    props: {
+        pageTitle: String
+    },
     components: {
         IonPage,
         IonHeader,
@@ -49,7 +56,6 @@ export default {
         IonContent,
         IonFooter,
         IonButtons,
-        IonButton,
         IonIcon
     }
 }

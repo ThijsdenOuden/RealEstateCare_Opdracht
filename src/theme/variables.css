@@ -1,6 +1,31 @@
 :root {
 	--colorfade-primary: linear-gradient(to right, rgba(71, 94, 108, 100), rgba(20, 27, 31, 100));
+	--input: rgba(130, 170, 193, 0.3);
 	--accent-color: rgb(0,170,162);
+	--accent-bright: rgb(4, 255, 242);
 	--accent-light: rgba(71, 94, 108, 100);
 	--accent-dark: rgba(20, 27, 31, 100);
+	--menu-button: rgba(20, 27, 31, .8);
+	--menu-icon: rgb(0, 172, 162);
+	--default-background:rgba(71, 94, 108, .6);
+	--text: rgb(255, 255, 255);
+	--text-invert: rgb(0, 0, 0);
+	--danger: rgb(221, 3, 3);
+	--confirm: rgb(0, 192, 0);
+}
+
+.themeSwitch {
+	--colorfade-primary: linear-gradient(to right, rgba(71, 94, 108, 100), rgba(20, 27, 31, 100));
+	--input: rgba(100, 130, 146, 0.3);
+	--accent-color: rgb(0,170,162);
+	--accent-bright: rgb(0, 141, 133);
+	--accent-light: rgb(71, 94, 108);
+	--accent-dark: rgba(255, 255, 255, 100);
+	--menu-button: rgba(0, 170, 162, 0.421);
+	--menu-icon: rgba(20, 27, 31, 100);
+	--default-background: rgb(154, 198, 223);
+	--text: rgb(0, 0, 0);
+	--text-invert: rgb(255, 255, 255);
+	--danger: rgb(221, 3, 3);
+	--confirm: rgb(0, 192, 0);
 }
