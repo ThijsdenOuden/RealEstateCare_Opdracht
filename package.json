@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@capacitor/app": "4.1.1",
-    "@capacitor/camera": "^5.0.2",
-    "@capacitor/core": "4.7.0",
+    "@capacitor/camera": "^4.1.4",
+    "@capacitor/core": "^4.0.7",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
