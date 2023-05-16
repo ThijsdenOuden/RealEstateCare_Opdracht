@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import homePage from '@/pages/HomePage';
+import homePage from '@/pages/homePage';
 import AssignedReports from '@/pages/AssignedReports';
 
 const routes = [
