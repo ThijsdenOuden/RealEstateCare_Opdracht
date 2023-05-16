@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import HomePage from '@/pages/HomePage.vue';
+import homePage from '@/pages/HomePage';
 import AssignedReports from '@/pages/AssignedReports';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage,
+    component: homePage,
     meta: { requiresAuth: true }
   },
   {
