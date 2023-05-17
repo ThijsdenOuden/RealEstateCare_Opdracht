@@ -650,7 +650,8 @@ ion-button {
 
 @keyframes borders {
     0% {}
-    100% {border: 4px solid var(--accent-color);}
+    100% {border: 4px solid var(--accent-bright);
+        box-shadow: 0 0 10px 1px var(--accent-color);}
 }
 
 @keyframes blurredText {

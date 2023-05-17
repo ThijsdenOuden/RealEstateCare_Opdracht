@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-const url = `https://api.jsonbin.io/v3/b/6463c0678e4aa6225e9e5d93`;
+const url = `https://api.jsonbin.io/v3/b/64650d329d312622a3601d12`;
 const key = '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq';
 
 export default createStore({
@@ -64,6 +64,7 @@ export default createStore({
               ...state.report,
               report_completed: false,
             };
+      commit('IS_LOADING', true);
       commit('UPDATE_REPORT', updatedReport);
       this.url = url;
       this.key = key;
@@ -74,12 +75,14 @@ export default createStore({
           'X-Master-Key': key,
         },
       });
+      commit('IS_LOADING', false);
     },
     async completedReports({ commit, state }) {
       const updatedReport = {
               ...state.report,
               report_completed: true,
             };
+      commit('IS_LOADING', true);
       commit('UPDATE_REPORT', updatedReport);
       this.url = url;
       this.key = key;
@@ -89,6 +92,7 @@ export default createStore({
           'X-Master-Key': key,
         },
       });
+      commit('IS_LOADING', false);
     },
     async loadReports({ commit }) {
       try {

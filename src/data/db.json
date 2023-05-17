@@ -1,411 +1,345 @@
-{
-  "accounts": [
-    {
-      "id": "1",
-      "username": "admin@rec.com",
-      "password": "Admin123"
-    },
-    {
-      "id": "2",
-      "username": "john@rec.com",
-      "password": "John123"
-    },
-    {
-      "id": "3",
-      "username": "jane@rec.com",
-      "password": "Jane123"
-    }
-  ],
-  "reports": [
-    {
-      "id": 1,
-      "date_inspection": "2023-02-14",
-      "property_location": "Lavendeldreef 3, Harmelen",
-      "report_completed": true,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "douche",
-            "dam_new_damage": true,
-            "dam_kind_of_damage": "Anders",
-            "dam_date_time": "2023-02-13",
-            "dam_needs_action": true,
-            "dam_description": "Waterschade bij de douche",
-            "dam_images": {
-              "image1": "blob:http://localhost:8080/d57d180a-764b-40d1-b8d2-747603ecd865",
-              "image2": "/Images/Damage_reports/Example2.jpeg",
-              "image3": "/Images/Damage_reports/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "master slaapkamer",
-            "main_kind_of_maintenance": "Schilderwerk",
-            "main_needs_action": false,
-            "main_cost_indication": "0-500",
-            "main_images": {
-              "image1": "/Images/Maintenance/Example1.jpeg",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "cv ketel beneden",
-            "tech_installation_type": "Verwarming",
-            "tech_reported_malfunction": "waakvlam is uit",
-            "tech_approved": true,
-            "tech_remark": "Werkt weer",
-            "tech_images": {
-              "image1": "/Images/Technical_installations/Example1.jpeg",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "modificaties.pdf",
-            "mod_location": "woonkamer",
-            "mod_carried_out_by": "RealEstateCare",
-            "mod_modification_type": "Stekkers 75cm naar beneden halen en in de muur frezen",
-            "mod_action": "Laten keuren",
-            "mod_remark": "Goed gekeurd",
-            "mod_images": {
-              "image1": "/Images/Modifications/Example1.jpeg",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+[
+  {
+    "id": 1,
+    "date_inspection": "2023-02-14",
+    "property_location": "Lavendeldreef 3, Harmelen",
+    "report_completed": true,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "douche",
+          "dam_new_damage": true,
+          "dam_kind_of_damage": "Anders",
+          "dam_date_time": "2023-02-13",
+          "dam_needs_action": true,
+          "dam_description": "Waterschade bij de douche",
+          "dam_image1": "/Images/Example1.jpeg",
+          "dam_image2": "/Images/Example2.jpeg",
+          "dam_image3": "/Images/Example3.jpeg"
         }
-      ]
-    },
-    {
-      "id": 2,
-      "date_inspection": "2022-09-10",
-      "property_location": "Landweg 36, Veendam",
-      "report_completed": true,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "Woonkamer",
-            "dam_new_damage": true,
-            "dam_kind_of_damage": "Slijtage",
-            "dam_date_time": "2023-05-08",
-            "dam_needs_action": false,
-            "dam_description": "Gespleten plinten",
-            "dam_images": {
-              "image1": "/Images/Damage_reports/Example1.jpeg",
-              "image2": "/Images/Damage_reports/Example2.jpeg",
-              "image3": "/Images/Damage_reports/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "slaapkamer",
-            "main_kind_of_maintenance": "Schilderwerk",
-            "main_needs_action": false,
-            "main_cost_indication": "0-500",
-            "main_images": {
-              "image1": "/Images/Maintenance/Example1.jpeg",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "cv ketel boven",
-            "tech_installation_type": "Verwarming",
-            "tech_reported_malfunction": "waakvlam is uit",
-            "tech_approved": true,
-            "tech_remark": "Werkt weer",
-            "tech_images": {
-              "image1": "/Images/Technical_installations/Example1.jpeg",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "modificaties.pdf",
-            "mod_location": "woonkamer",
-            "mod_carried_out_by": "RealEstateCare",
-            "mod_modification_type": "Stekkers 75cm naar beneden halen en in de muur frezen",
-            "mod_action": "Laten keuren",
-            "mod_remark": "Goed gekeurd",
-            "mod_images": {
-              "image1": "/Images/Modifications/Example1.jpeg",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+      },
+      {
+        "maintenance": {
+          "main_location": "master slaapkamer",
+          "main_kind_of_maintenance": "Schilderwerk",
+          "main_needs_action": false,
+          "main_cost_indication": "0-500",
+          "main_image1": "/Images/Example1.jpeg",
+          "main_image2": "/Images/Example2.jpeg",
+          "main_image3": ""
         }
-      ]
-    },
-    {
-      "id": 3,
-      "date_inspection": "2022-08-10",
-      "property_location": "Binnensingel 45, Den Bosch",
-      "report_completed": false,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "slaapkamer",
-            "dam_new_damage": true,
-            "dam_kind_of_damage": "Normaal gebruik",
-            "dam_date_time": "2022-07-29",
-            "dam_needs_action": true,
-            "dam_description": "nieuw raam installeren",
-            "dam_images": {
-              "image1": "/Images/Damage_reports/Example1.jpeg",
-              "image2": "/Images/Damage_reports/Example2.jpeg",
-              "image3": "/Images/Damage_reports/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "",
-            "main_kind_of_maintenance": "",
-            "main_needs_action": false,
-            "main_cost_indication": "",
-            "main_images": {
-              "image1": "/Images/Maintenance/Example1.jpeg",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "zolder",
-            "tech_installation_type": "Verwarming",
-            "tech_reported_malfunction": "lekt",
-            "tech_approved": true,
-            "tech_remark": "bout aangedraaid en opgelost",
-            "tech_images": {
-              "image1": "/Images/Technical_installations/Example1.jpeg",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "",
-            "mod_location": "",
-            "mod_carried_out_by": "",
-            "mod_modification_type": "",
-            "mod_action": "",
-            "mod_remark": "",
-            "mod_images": {
-              "image1": "/Images/Modifications/Example1.jpeg",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+      },
+      {
+        "technical_installations": {
+          "tech_location": "cv ketel beneden",
+          "tech_installation_type": "Verwarming",
+          "tech_reported_malfunction": "waakvlam is uit",
+          "tech_approved": true,
+          "tech_remark": "Werkt weer",
+          "tech_image1": "/Images/Example1.jpeg",
+          "tech_image2": "/Images/Example2.jpeg",
+          "tech_image3": "/Images/Example3.jpeg"
         }
-      ]
-    },
-    {
-      "id": 4,
-      "date_inspection": "2022-09-02",
-      "property_location": "van Damweg 88, Ede",
-      "report_completed": false,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "",
-            "dam_new_damage": false,
-            "dam_kind_of_damage": "",
-            "dam_date_time": "",
-            "dam_needs_action": false,
-            "dam_description": "",
-            "dam_images": {
-              "image1": "/Images/Damage_reports/Example1.jpeg",
-              "image2": "/Images/Damage_reports/Example2.jpeg",
-              "image3": "/Images/Damage_reports/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "Benedenverdieping",
-            "main_kind_of_maintenance": "Schilderwerk",
-            "main_needs_action": true,
-            "main_cost_indication": "500-1500",
-            "main_images": {
-              "image1": "/Images/Maintenance/Example1.jpeg",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "",
-            "tech_installation_type": "",
-            "tech_reported_malfunction": "",
-            "tech_approved": false,
-            "tech_remark": "",
-            "tech_images": {
-              "image1": "/Images/Technical_installations/Example1.jpeg",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "",
-            "mod_location": "",
-            "mod_carried_out_by": "",
-            "mod_modification_type": "",
-            "mod_action": "",
-            "mod_remark": "",
-            "mod_images": {
-              "image1": "/Images/Modifications/Example1.jpeg",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "modificaties.pdf",
+          "mod_location": "woonkamer",
+          "mod_carried_out_by": "RealEstateCare",
+          "mod_modification_type": "Stekkers 75cm naar beneden halen en in de muur frezen",
+          "mod_action": "Laten keuren",
+          "mod_remark": "Goed gekeurd",
+          "mod_image1": "/Images/Example1.jpeg",
+          "mod_image2": "",
+          "mod_image3": ""
+          
         }
-      ]
-    },
-    {
-      "id": 5,
-      "date_inspection": "2022-07-29",
-      "property_location": "Zevenwegenlaan 43, Delft",
-      "report_completed": false,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "",
-            "dam_new_damage": false,
-            "dam_kind_of_damage": "",
-            "dam_date_time": "",
-            "dam_needs_action": false,
-            "dam_description": "",
-            "dam_images": {
-              "image1": "/Images/Damage_reports/Example1.jpeg",
-              "image2": "/Images/Damage_reports/Example2.jpeg",
-              "image3": "/Images/Damage_reports/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "",
-            "main_kind_of_maintenance": "",
-            "main_needs_action": false,
-            "main_cost_indication": "",
-            "main_images": {
-              "image1": "/Images/Maintenance/Example1.jpeg",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "",
-            "tech_installation_type": "",
-            "tech_reported_malfunction": "",
-            "tech_approved": false,
-            "tech_remark": "",
-            "tech_images": {
-              "image1": "/Images/Technical_installations/Example1.jpeg",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "geen",
-            "mod_location": "benedenverdieping",
-            "mod_carried_out_by": "RealEstateCare",
-            "mod_modification_type": "nieuwe raam kozijnen",
-            "mod_action": "Laten keuren",
-            "mod_remark": "",
-            "mod_images": {
-              "image1": "/Images/Modifications/Example1.jpeg",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date_inspection": "2022-09-10",
+    "property_location": "Landweg 36, Veendam",
+    "report_completed": true,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "Woonkamer",
+          "dam_new_damage": true,
+          "dam_kind_of_damage": "Slijtage",
+          "dam_date_time": "2023-05-08",
+          "dam_needs_action": false,
+          "dam_description": "Gespleten plinten",
+          "dam_image1": "",
+          "dam_image2": "",
+          "dam_image3": ""
         }
-      ]
-    },
-    {
-      "id": 6,
-      "date_inspection": "2023-01-12",
-      "property_location": "Bovenbuurtweg 7,Oeffelt",
-      "report_completed": false,
-      "report": [
-        {
-          "damage_reports": {
-            "dam_location": "Badkamer",
-            "dam_new_damage": true,
-            "dam_kind_of_damage": "Slijtage",
-            "dam_date_time": "",
-            "dam_needs_action": false,
-            "dam_description": "",
-            "dam_images": {
-              "image1": "blob:http://localhost:8080/bf2b1adc-cd0c-4725-b90c-32300a3ab0f5",
-              "image2": "blob:http://localhost:8080/32ec4922-9d26-482c-81fe-69b3598c1175",
-              "image3": "blob:http://localhost:8080/2460fc26-ad93-43e2-98a1-1c371b10f787"
-            }
-          }
-        },
-        {
-          "maintenance": {
-            "main_location": "bovenverdieping",
-            "main_kind_of_maintenance": "Leidingwerk",
-            "main_needs_action": true,
-            "main_cost_indication": "500-1500",
-            "main_images": {
-              "image1": "blob:http://localhost:8080/4cc77174-cc43-4e56-aa88-ba9cca5dfa5c",
-              "image2": "/Images/Maintenance/Example2.jpeg",
-              "image3": "/Images/Maintenance/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "technical_installations": {
-            "tech_location": "zolder",
-            "tech_installation_type": "Verwarming",
-            "tech_reported_malfunction": "Waakvlam is uit",
-            "tech_approved": true,
-            "tech_remark": "Nagekeken",
-            "tech_images": {
-              "image1": "blob:http://localhost:8080/fd5d92e5-f125-43ff-93d3-03254ecc1b09",
-              "image2": "/Images/Technical_installations/Example2.jpeg",
-              "image3": "/Images/Technical_installations/Example3.jpeg"
-            }
-          }
-        },
-        {
-          "modifications": {
-            "mod_documented_modifications": "",
-            "mod_location": "",
-            "mod_carried_out_by": "",
-            "mod_modification_type": "",
-            "mod_action": "",
-            "mod_remark": "",
-            "mod_images": {
-              "image1": "blob:http://localhost:8080/b4d79754-eefb-4fc0-b7f7-ce4438551aae",
-              "image2": "/Images/Modifications/Example2.jpeg",
-              "image3": "/Images/Modifications/Example3.jpeg"
-            }
-          }
+      },
+      {
+        "maintenance": {
+          "main_location": "slaapkamer",
+          "main_kind_of_maintenance": "Schilderwerk",
+          "main_needs_action": false,
+          "main_cost_indication": "0-500",
+          "main_image1": "",
+          "main_image2": "",
+          "main_image3": ""
         }
-      ]
-    }
-  ]
-}
+      },
+      {
+        "technical_installations": {
+          "tech_location": "cv ketel boven",
+          "tech_installation_type": "Verwarming",
+          "tech_reported_malfunction": "waakvlam is uit",
+          "tech_approved": true,
+          "tech_remark": "Werkt weer",
+          "tech_image1": "",
+          "tech_image2": "",
+          "tech_image3": ""
+        }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "modificaties.pdf",
+          "mod_location": "woonkamer",
+          "mod_carried_out_by": "RealEstateCare",
+          "mod_modification_type": "Stekkers 75cm naar beneden halen en in de muur frezen",
+          "mod_action": "Laten keuren",
+          "mod_remark": "Goed gekeurd",
+          "mod_image1": "/Images/Example1.jpeg",
+          "mod_image2": "/Images/Example2.jpeg",
+          "mod_image3": "/Images/Example3.jpeg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date_inspection": "2022-08-10",
+    "property_location": "Binnensingel 45, Den Bosch",
+    "report_completed": false,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "slaapkamer",
+          "dam_new_damage": true,
+          "dam_kind_of_damage": "Normaal gebruik",
+          "dam_date_time": "2022-07-29",
+          "dam_needs_action": true,
+          "dam_description": "nieuw raam installeren",
+          "dam_image1": "",
+          "dam_image2": "",
+          "dam_image3": ""
+        }
+      },
+      {
+        "maintenance": {
+          "main_location": "",
+          "main_kind_of_maintenance": "",
+          "main_needs_action": false,
+          "main_cost_indication": "",
+          "main_image1": "",
+          "main_image2": "",
+          "main_image3": ""
+        }
+      },
+      {
+        "technical_installations": {
+          "tech_location": "zolder",
+          "tech_installation_type": "Verwarming",
+          "tech_reported_malfunction": "lekt",
+          "tech_approved": true,
+          "tech_remark": "bout aangedraaid en opgelost",
+          "tech_image1": "",
+          "tech_image2": "",
+          "tech_image3": ""
+        }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "",
+          "mod_location": "",
+          "mod_carried_out_by": "",
+          "mod_modification_type": "",
+          "mod_action": "",
+          "mod_remark": "",
+          "mod_image1": "",
+          "mod_image2": "",
+          "mod_image3": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "date_inspection": "2022-09-02",
+    "property_location": "van Damweg 88, Ede",
+    "report_completed": false,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "",
+          "dam_new_damage": false,
+          "dam_kind_of_damage": "",
+          "dam_date_time": "",
+          "dam_needs_action": false,
+          "dam_description": "",
+          "dam_image1": "",
+          "dam_image2": "",
+          "dam_image3": ""
+        }
+      },
+      {
+        "maintenance": {
+          "main_location": "Benedenverdieping",
+          "main_kind_of_maintenance": "Schilderwerk",
+          "main_needs_action": true,
+          "main_cost_indication": "500-1500",
+          "main_image1": "",
+          "main_image2": "",
+          "main_image3": ""
+        }
+      },
+      {
+        "technical_installations": {
+          "tech_location": "",
+          "tech_installation_type": "",
+          "tech_reported_malfunction": "",
+          "tech_approved": false,
+          "tech_remark": "",
+          "tech_image1": "",
+          "tech_image2": "",
+          "tech_image3": ""
+        }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "",
+          "mod_location": "",
+          "mod_carried_out_by": "",
+          "mod_modification_type": "",
+          "mod_action": "",
+          "mod_remark": "",
+          "mod_image1": "",
+          "mod_image2": "",
+          "mod_image3": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date_inspection": "2022-07-29",
+    "property_location": "Zevenwegenlaan 43, Delft",
+    "report_completed": false,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "",
+          "dam_new_damage": false,
+          "dam_kind_of_damage": "",
+          "dam_date_time": "",
+          "dam_needs_action": false,
+          "dam_description": "",
+          "dam_image1": "",
+          "dam_image2": "",
+          "dam_image3": ""
+        }
+      },
+      {
+        "maintenance": {
+          "main_location": "",
+          "main_kind_of_maintenance": "",
+          "main_needs_action": false,
+          "main_cost_indication": "",
+          "main_image1": "",
+          "main_image2": "",
+          "main_image3": ""
+        }
+      },
+      {
+        "technical_installations": {
+          "tech_location": "",
+          "tech_installation_type": "",
+          "tech_reported_malfunction": "",
+          "tech_approved": false,
+          "tech_remark": "",
+          "tech_image1": "",
+          "tech_image2": "",
+          "tech_image3": ""
+        }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "geen",
+          "mod_location": "benedenverdieping",
+          "mod_carried_out_by": "RealEstateCare",
+          "mod_modification_type": "nieuwe raam kozijnen",
+          "mod_action": "Laten keuren",
+          "mod_remark": "",
+          "mod_image1": "",
+          "mod_image2": "",
+          "mod_image3": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "date_inspection": "2023-01-12",
+    "property_location": "Bovenbuurtweg 7,Oeffelt",
+    "report_completed": false,
+    "report": [
+      {
+        "damage_reports": {
+          "dam_location": "Badkamer",
+          "dam_new_damage": true,
+          "dam_kind_of_damage": "Slijtage",
+          "dam_date_time": "",
+          "dam_needs_action": false,
+          "dam_description": "",
+          "dam_image1": "",
+          "dam_image2": "",
+          "dam_image3": ""
+        }
+      },
+      {
+        "maintenance": {
+          "main_location": "bovenverdieping",
+          "main_kind_of_maintenance": "Leidingwerk",
+          "main_needs_action": true,
+          "main_cost_indication": "500-1500",
+          "main_image1": "",
+          "main_image2": "",
+          "main_image3": ""
+        }
+      },
+      {
+        "technical_installations": {
+          "tech_location": "zolder",
+          "tech_installation_type": "Verwarming",
+          "tech_reported_malfunction": "Waakvlam is uit",
+          "tech_approved": true,
+          "tech_remark": "Nagekeken",
+          "tech_image1": "",
+          "tech_image2": "",
+          "tech_image3": ""
+        }
+      },
+      {
+        "modifications": {
+          "mod_documented_modifications": "",
+          "mod_location": "",
+          "mod_carried_out_by": "",
+          "mod_modification_type": "",
+          "mod_action": "",
+          "mod_remark": "",
+          "mod_image1": "",
+          "mod_image2": "",
+          "mod_image3": ""
+        }
+      }
+    ]
+  }
+]

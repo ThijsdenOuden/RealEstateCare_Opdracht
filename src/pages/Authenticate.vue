@@ -47,7 +47,7 @@ export default {
             if (authenticationNumber == this.authentication) {
                 sessionStorage.setItem('Authenticated', true);
                 this.presentToast();
-                this.$router.push({ name: 'home' });
+                this.$router.replace( '/');
             } else if (authenticationNumber !== this.authentication){
                 this.errorToast();
                 document.getElementById('authCard').style.border = '3px solid var(--danger)';

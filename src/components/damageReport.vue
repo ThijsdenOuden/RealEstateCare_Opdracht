@@ -38,11 +38,11 @@
       </div>
       <div class="inputColumn">
         <ion-button class="imageButton" type="button" @click="() => takePhoto('image1')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_images.image1"></ion-input>
+        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image1"></ion-input>
         <ion-button class="imageButton" type="button" @click="() => takePhoto('image2')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_images.image2"></ion-input>
+        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image2"></ion-input>
         <ion-button class="imageButton" type="button" @click="() => takePhoto('image3')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_images.image3"></ion-input>
+        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image3"></ion-input>
       </div>
     </div>
   </section>
@@ -77,7 +77,7 @@ export default {
           resultType: CameraResultType.Uri,
         });
         const imageUrl = image.webPath;
-        this.damageReport.dam_images[imageKey] = imageUrl;
+        this.damageReport[`dam_${imageKey}`] = imageUrl;
       } catch (error) {
         console.error('Camera error:', error);
       }

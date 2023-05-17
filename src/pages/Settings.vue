@@ -27,6 +27,8 @@ import {
     IonToggle,
     IonButton
 } from '@ionic/vue'
+import axios from 'axios';
+import dataBase from '../data/db.json';
 
 export default {
     name: "SettingsPage",
@@ -44,6 +46,12 @@ export default {
             }
         },
         logout() {
+            axios.put('https://api.jsonbin.io/v3/b/64650d329d312622a3601d12', dataBase, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq',
+                    }
+                })
             sessionStorage.removeItem('Login');
             sessionStorage.removeItem('Authenticated');
             sessionStorage.removeItem('ID');

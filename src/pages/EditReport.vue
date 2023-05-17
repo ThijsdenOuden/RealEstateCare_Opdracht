@@ -1,5 +1,6 @@
 <template>
     <base-layout pageTitle="Aanpassen">
+        <ion-spinner v-if="loading" name="circular" id="spinner"></ion-spinner>
         <section class="contentOverflow">
             <form class="assignForm">
                 <div class="formHeader">
@@ -46,8 +47,10 @@ import { mapState } from 'vuex';
 import {
     IonButton,
     IonInput,
-    toastController
+    toastController,
+    IonSpinner
 } from '@ionic/vue';
+import { mapGetters } from "vuex";
 import damageReport from '../components/damageReport.vue';
 import maintenanceReport from '../components/maintenanceReport.vue';
 import installationReport from '../components/installationReport.vue';
@@ -61,12 +64,14 @@ export default {
         installationReport,
         modificationReport,
         IonButton,
-        IonInput
+        IonInput,
+        IonSpinner
     },
     computed: {
         ...mapState({
             report: (state) => state.report,
         }),
+        ...mapGetters(['loading']),
     },
     methods: {
         updateReport() {

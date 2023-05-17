@@ -39,9 +39,9 @@
                             <li class="itemTitle">Omschrijving:</li>
                             <li class="itemContent">{{ report.report[0].damage_reports.dam_description }}</li>
                             <li class="itemTitle">Foto's:</li>
-                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_images.image1 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_images.image2 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_images.image3 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_image1 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_image2 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[0].damage_reports.dam_image3 }}</li>
                         </ul>
                     </li>
                     <li class="listPart">
@@ -58,9 +58,9 @@
                             <li class="itemTitle">Kostenindicatie:</li>
                             <li class="itemContent">{{ report.report[1].maintenance.main_cost_indication }}</li>
                             <li class="itemTitle">Foto's:</li>
-                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_images.image1 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_images.image2 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_images.image3 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_image1 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_image2 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[1].maintenance.main_image3 }}</li>
                         </ul>
                     </li>
                     <li class="listPart">
@@ -81,9 +81,9 @@
                             <li class="itemTitle">Opmerkingen:</li>
                             <li class="itemContent">{{ report.report[2].technical_installations.tech_remark }}</li>
                             <li class="itemTitle">Foto's:</li>
-                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_images.image1 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_images.image2 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_images.image3 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_image1 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_image2 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[2].technical_installations.tech_image3 }}</li>
                         </ul>
                     </li>
                     <li class="listPart">
@@ -104,9 +104,9 @@
                             <li class="itemTitle">Opmerkingen:</li>
                             <li class="itemContent">{{ report.report[3].modifications.mod_remark }}</li>
                             <li class="itemTitle">Foto's:</li>
-                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_images.image1 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_images.image2 }}</li>
-                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_images.image3 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_image1 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_image2 }}</li>
+                            <li class="itemContent smallerText"> {{ report.report[3].modifications.mod_image3 }}</li>
                         </ul>
                     </li>
                 </ul>
@@ -159,16 +159,6 @@ export default {
             this.$store.dispatch('editReport', reportId);
             this.$router.replace('/editReport');
         },
-        // async presentLoadingToast() {
-        //     const toast = await toastController.create({
-        //         message: "Laden...",
-        //         cssClass: 'toast',
-        //         duration: 8000,
-        //         position: 'top'
-        //     });
-
-        //     await toast.present();
-        // },
     },
     computed: {
         ...mapGetters(['loading']),
