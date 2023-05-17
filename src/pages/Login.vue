@@ -52,34 +52,43 @@ export default {
     },
     methods: {
         async login() {
-            const url = `https://api.jsonbin.io/v3/b/646395fb8e4aa6225e9e4711/latest/acounts?username=${this.username}&password=${this.password}`;
-            const headers = {
-                'Content-Type': 'application/json',
-                'X-Master-Key': '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq'
-            };
-
-            const result = await axios.get(url, { headers });
-            if (result.status == 200 && result.data.length > 0) {
+            
+            try {
+                const url = 'https://api.jsonbin.io/v3/b/6463b7aa8e4aa6225e9e59d7';
+                const user = JSON.stringify(this.username);
+                const pass = JSON.stringify(this.password);
+                const result = await axios.get(url, { 
+                    headers: {
+                        'X-Master-Key': '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq',
+                        'X-JSON-Path': `$.accounts[?(@.username==${user} && @.password==${pass})]`,
+                    },
+                });
+                
+                if (result.status == 200 && result.data.record) {
                 const randomNumber = Math.floor(Math.random() * (100000 - 10000)) + 10000;
                 console.log(randomNumber);
-                
+
                 localStorage.setItem('Authentication', randomNumber);
                 sessionStorage.setItem('Login', true);
-                sessionStorage.setItem('ID', result.data[0].id);
+                sessionStorage.setItem('ID', result.data.record[0].id);
 
-                const userId = result.data[0].id;
-                const userPass = result.data[0].password;
+                const userId = result.data.record[0].id;
+                const userPass = result.data.record[0].password;
                 this.$store.commit('SET_USERPASS', userPass);
-                
+
                 this.setUserName(userId);
                 this.presentToast(randomNumber);
                 this.$router.push({ name: 'authenticate' });
-            } else if (result.status == 200 && result.data.length == 0) {
+                } else {
                 this.errorToast();
                 document.getElementById('loginCard').style.border = '3px solid var(--danger)';
                 document.getElementById('loginCard').style.boxShadow = '0 0 50px 1px var(--danger)';
+                }
+            } catch (error) {
+                console.error(error);
             }
-        },
+            },
+
         async presentToast(randomNumber) {
             const message = "Uw verificatiecode is: ";
             const toast = await toastController.create({

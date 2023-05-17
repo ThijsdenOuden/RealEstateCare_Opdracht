@@ -70,7 +70,7 @@ export default {
     },
     methods: {
         updateReport() {
-            this.$store.dispatch('markReportNotComplete')
+            this.$store.dispatch('updateReport')
                 .then(() => {
                     this.presentToast();
                     this.$router.replace('/AssignedReports');
@@ -81,7 +81,7 @@ export default {
                 });
         },
         completeReport() {
-            this.$store.dispatch('markReportCompleted')
+            this.$store.dispatch('completedReports')
                 .then(() => {
                     this.presentToastComplete();
                     this.$router.replace('/PerformedReports');

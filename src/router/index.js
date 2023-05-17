@@ -49,7 +49,7 @@ const routes = [
     name: 'authenticate',
     component: () => import('@/pages/Authenticate'),
     meta: { requiresLogin: true }
-  },
+  }
 ]
 
 const router = createRouter({

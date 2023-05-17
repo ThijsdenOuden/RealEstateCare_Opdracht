@@ -1,4 +1,5 @@
 <template>
+    <ion-spinner v-if="loading" name="circular" id="spinner"></ion-spinner>
     <ion-card class="reportCard" v-for="report in sortedReports" :key="report.id"
         @click="report.showContent = !report.showContent">
         <ion-card-header class="reportCardHeader">
@@ -122,8 +123,10 @@ import {
     IonCardSubtitle,
     IonCardContent,
     IonButton,
-    IonIcon
+    IonIcon,
+    IonSpinner
 } from "@ionic/vue";
+import { mapGetters } from "vuex";
 
 export default {
     name: "performedReports",
@@ -140,11 +143,11 @@ export default {
         IonCardSubtitle,
         IonCardContent,
         IonButton,
-        IonIcon
+        IonIcon,
+        IonSpinner
     },
     data() {
         return {
-            jsonData: null,
             reports: [],
         };
     },
@@ -156,8 +159,19 @@ export default {
             this.$store.dispatch('editReport', reportId);
             this.$router.replace('/editReport');
         },
+        // async presentLoadingToast() {
+        //     const toast = await toastController.create({
+        //         message: "Laden...",
+        //         cssClass: 'toast',
+        //         duration: 8000,
+        //         position: 'top'
+        //     });
+
+        //     await toast.present();
+        // },
     },
     computed: {
+        ...mapGetters(['loading']),
         sortedReports() {
             const reports = this.$store.getters.sortedReports;
             if (this.completed) {

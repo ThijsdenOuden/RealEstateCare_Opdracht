@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-import { getJsonData } from "@/services/json.service.js";
+const url = `https://api.jsonbin.io/v3/b/6463c0678e4aa6225e9e5d93`;
+const key = '$2b$10$pABFxM8WP4rImbk4IqMBbuWmCvHQ.jHsY/lQMg4tef.22J9kLXRLq';
 
 export default createStore({
   state: {
@@ -8,7 +9,8 @@ export default createStore({
     userId: '',
     userPass: '',
     report: {},
-    reports: []
+    reports: [],
+    loading: false,
   },
   mutations: {
     SET_USERNAME(state, userName) {
@@ -26,65 +28,94 @@ export default createStore({
     SET_REPORTS(state, reports) {
       state.reports = reports;
     },
-    UPDATE_COMPLETED(state, completed) {
-      state.report.report_completed = completed;
+    UPDATE_REPORT(state, updatedReport) {
+        state.reports = state.reports.map((report) =>
+        report.id === updatedReport.id ? updatedReport : report
+      );
       this.dispatch('loadReports');
     },
-    UPDATE_NO_COMPLETE(state, notCompleted) {
-      state.report.report_completed = notCompleted;
-      this.dispatch('loadReports');
-    }
+    IS_LOADING(state, value) {
+      state.loading = value;
+    },
   },
   actions: {
     async editReport({ commit }, reportId) {
       try {
-        const response = await axios.get(`http://localhost:3000/reports/${reportId}`);
-        const report = response.data;
-
+        commit('IS_LOADING', true);
+        this.url = url;
+        this.key = key;
+        const id = JSON.stringify(reportId);
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Master-Key': key,
+            'X-JSON-Path': `$[?(@.id==${id})]`,
+          },
+        });
+        const report = response.data.record[0];
+        commit('IS_LOADING', false);
         commit('SET_REPORT', report);
       } catch (error) {
         console.error(error);
       }
     },
-    async markReportNotComplete({ commit, state }) {
-      try {
-        const updatedReport = {
-          ...state.report,
-          report_completed: false,
-        };
+    async updateReport({ commit, state }) {
+      const updatedReport = {
+              ...state.report,
+              report_completed: false,
+            };
+      commit('UPDATE_REPORT', updatedReport);
+      this.url = url;
+      this.key = key;
 
-        await axios.put(`http://localhost:3000/reports/${updatedReport.id}`, updatedReport);
-
-        commit('UPDATE_NO_COMPLETE', false);
-      } catch (error) {
-        console.error(error);
-      }
+      await axios.put(url, state.reports, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': key,
+        },
+      });
     },
-    async markReportCompleted({ commit, state }) {
-      try {
-        const updatedReport = {
-          ...state.report,
-          report_completed: true,
-        };
-
-        await axios.put(`http://localhost:3000/reports/${updatedReport.id}`, updatedReport);
-
-        commit('UPDATE_COMPLETED', true);
-      } catch (error) {
-        console.error(error);
-      }
+    async completedReports({ commit, state }) {
+      const updatedReport = {
+              ...state.report,
+              report_completed: true,
+            };
+      commit('UPDATE_REPORT', updatedReport);
+      this.url = url;
+      this.key = key;
+      await axios.put(url, state.reports, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': key,
+        },
+      });
     },
     async loadReports({ commit }) {
-      getJsonData()
-            .then((data) => {
-                commit('SET_REPORTS', data);
-            })
-            .catch((error) => console.error(error));
+      try {
+        commit('IS_LOADING', true);
+        this.url = url;
+        this.key = key;
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Master-Key': key,
+          },
+        });
+        const reports = response.data.record;
+        commit('IS_LOADING', false);
+        commit('SET_REPORTS', reports);
+      } catch (error) {
+        commit('IS_LOADING', false);
+        console.error(error);
+      }
     }
   },
   getters: {
     sortedReports(state) {
       return state.reports.sort((a, b) => new Date(b.date_inspection) - new Date(a.date_inspection));
-    }
+    },
+    loading(state) {
+      return state.loading;
+    },
   }
 });
