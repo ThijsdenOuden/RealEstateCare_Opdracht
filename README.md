@@ -74,3 +74,5 @@ Er is hard gewerkt om de applicatie mooi, toegankelijk, gebruikersvriendelijk en
 
     ThijsdenOuden@outlook.com
 
+**Let op:**
+Het JSON bestand wordt na het uitloggen opnieuw ingesteld met de beginwaardes.
