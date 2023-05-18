@@ -3,7 +3,9 @@
         <div
           class="formTitle"
           @click="showForm = !showForm">
-            <h4>Installatie</h4>
+            <h4>Installatie
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </h4>
         </div>
         <div v-show="showForm">
             <div class="inputColumn">
@@ -54,12 +56,30 @@
                   v-model="Tech.tech_remark" />
             </div>
             <div class="inputColumn">
-                <ion-button class="imageButton" type="button" @click="() => takePhoto('image1')">Foto maken</ion-button>
-                <ion-input class="imageInput" type="url" v-model="Tech.tech_image1"></ion-input>
-                <ion-button class="imageButton" type="button" @click="() => takePhoto('image2')">Foto maken</ion-button>
-                <ion-input class="imageInput" type="url" v-model="Tech.tech_image2"></ion-input>
-                <ion-button class="imageButton" type="button" @click="() => takePhoto('image3')">Foto maken</ion-button>
-                <ion-input class="imageInput" type="url" v-model="Tech.tech_image3"></ion-input>
+                <ion-button
+                  class="imageButton"
+                  type="button"
+                  @click="() => takePhoto('image1')">Foto maken</ion-button>
+                  <ion-input
+                  class="imageInput"
+                  type="url"
+                  v-model="Tech.tech_image1"></ion-input>
+                  <ion-button
+                  class="imageButton"
+                  type="button"
+                  @click="() => takePhoto('image2')">Foto maken</ion-button>
+                  <ion-input
+                  class="imageInput"
+                  type="url"
+                  v-model="Tech.tech_image2"></ion-input>
+                  <ion-button
+                  class="imageButton"
+                  type="button"
+                  @click="() => takePhoto('image3')">Foto maken</ion-button>
+                  <ion-input
+                  class="imageInput"
+                  type="url"
+                  v-model="Tech.tech_image3"></ion-input>
             </div>
         </div>
     </section>

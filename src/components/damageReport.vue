@@ -1,20 +1,33 @@
 <template>
   <section class="form">
-    <div class="formTitle" @click="showForm = !showForm">
-      <h4>Schade</h4>
+    <div
+      class="formTitle"
+      @click="showForm = !showForm">
+      <h4>Schade
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </h4>
     </div>
     <div v-show="showForm">
       <div class="inputColumn">
         <label for="dam_location">Locatie van de schade:</label>
-        <ion-input type="text" fill="outline" id="dam_location" v-model="damageReport.dam_location" />
+        <ion-input
+          type="text"
+          fill="outline"
+          id="dam_location"
+          v-model="damageReport.dam_location" />
       </div>
       <div class="input">
         <label for="dam_new_damage">Nieuwe schade:</label>
-        <ion-checkbox id="dam_new_damage" v-model="damageReport.dam_new_damage"></ion-checkbox>
+        <ion-checkbox
+          id="dam_new_damage"
+          v-model="damageReport.dam_new_damage"></ion-checkbox>
       </div>
       <div class="inputColumn">
         <label for="dam_kind_of_damage">Soort schade:</label>
-        <ion-select id="dam_kind_of_damage" v-model="damageReport.dam_kind_of_damage" placeholder="Selecteer"
+        <ion-select
+          id="dam_kind_of_damage"
+          v-model="damageReport.dam_kind_of_damage"
+          placeholder="Selecteer"
           interface="action-sheet">
           <ion-select-option value="Moedwillig">Moedwillig</ion-select-option>
           <ion-select-option value="Slijtage">Slijtage</ion-select-option>
@@ -26,23 +39,49 @@
       </div>
       <div class="input">
         <label for="dam_date_time">Datum:</label>
-        <input type="date" id="dam_date_time" v-model="damageReport.dam_date_time">
+        <input
+          type="date"
+          id="dam_date_time"
+          v-model="damageReport.dam_date_time">
       </div>
       <div class="input">
         <label for="dam_needs_action">Acute actie vereist:</label>
-        <ion-checkbox id="dam_needs_action" v-model="damageReport.dam_needs_action"></ion-checkbox>
+        <ion-checkbox
+          id="dam_needs_action"
+          v-model="damageReport.dam_needs_action"></ion-checkbox>
       </div>
       <div class="inputColumn">
         <label for="dam_description">Omschrijving:</label>
-        <ion-input type="text" id="dam_description" v-model="damageReport.dam_description" />
+        <ion-input
+          type="text"
+          id="dam_description"
+          v-model="damageReport.dam_description" />
       </div>
       <div class="inputColumn">
-        <ion-button class="imageButton" type="button" @click="() => takePhoto('image1')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image1"></ion-input>
-        <ion-button class="imageButton" type="button" @click="() => takePhoto('image2')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image2"></ion-input>
-        <ion-button class="imageButton" type="button" @click="() => takePhoto('image3')">Foto maken</ion-button>
-        <ion-input class="imageInput" type="url" v-model="damageReport.dam_image3"></ion-input>
+        <ion-button
+          class="imageButton"
+          type="button"
+          @click="() => takePhoto('image1')">Foto maken</ion-button>
+          <ion-input
+          class="imageInput"
+          type="url"
+          v-model="damageReport.dam_image1"></ion-input>
+          <ion-button
+          class="imageButton"
+          type="button"
+          @click="() => takePhoto('image2')">Foto maken</ion-button>
+          <ion-input
+          class="imageInput"
+          type="url"
+          v-model="damageReport.dam_image2"></ion-input>
+          <ion-button
+          class="imageButton"
+          type="button"
+          @click="() => takePhoto('image3')">Foto maken</ion-button>
+          <ion-input
+          class="imageInput"
+          type="url"
+          v-model="damageReport.dam_image3"></ion-input>
       </div>
     </div>
   </section>
@@ -55,7 +94,8 @@ import {
   IonSelect,
   IonSelectOption,
   IonInput,
-  IonButton
+  IonButton,
+  IonIcon
 } from '@ionic/vue';
 import { Camera, CameraResultType } from '@capacitor/camera';
 
@@ -66,7 +106,8 @@ export default {
     IonSelect,
     IonSelectOption,
     IonInput,
-    IonButton
+    IonButton,
+    IonIcon
   },
   methods: {
     async takePhoto(imageKey) {

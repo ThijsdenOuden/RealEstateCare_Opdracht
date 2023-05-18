@@ -2,7 +2,9 @@
     <base-layout pageTitle="Account">
         <div id="content">
             <div id="profilePicture">
-                <img src="@/theme/Logo/logo_blue.png" alt="profiel foto">
+                <img
+                  src="@/theme/Logo/logo_blue.png"
+                  alt="placeholder profiel foto">
             </div>
             <ion-card id="profileCard">
                 <h4>Profiel naam:</h4>

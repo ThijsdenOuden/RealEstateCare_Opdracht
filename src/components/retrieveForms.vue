@@ -1,9 +1,18 @@
 <template>
-    <ion-spinner v-if="loading" name="circular" id="spinner"></ion-spinner>
-    <ion-card class="reportCard" v-for="report in sortedReports" :key="report.id"
-        @click="report.showContent = !report.showContent">
+    <ion-spinner
+      v-if="loading"
+      name="circular"
+      id="spinner"></ion-spinner>
+    <ion-card
+      class="reportCard"
+      v-for="report in sortedReports"
+      :key="report.id"
+      @click="report.showContent = !report.showContent">
         <ion-card-header class="reportCardHeader">
-            <ion-icon name="checkmark-circle-outline" class="confirmIcon" v-if="completed == true"></ion-icon>
+            <ion-icon
+              name="checkmark-circle-outline"
+              class="confirmIcon"
+              v-if="completed == true"></ion-icon>
             <ion-card-title class="cardTitle">
                 <strong>{{ report.property_location }}</strong>
             </ion-card-title>
@@ -12,11 +21,15 @@
             </ion-card-subtitle>
         </ion-card-header>
 
-        <ion-card-content class="reportCardContent" v-if="report.showContent">
+        <ion-card-content
+          class="reportCardContent"
+          v-if="report.showContent">
             <div>
                 <h4>ID: {{ report.id }}</h4>
                 <div class="editButton">
-                    <ion-button @click='editForm(report.id)' class="formButton">
+                    <ion-button
+                      @click='editForm(report.id)'
+                      class="formButton">
                         <ion-icon name="create-outline"></ion-icon>
                         Openen en aanpassen</ion-button>
                 </div>

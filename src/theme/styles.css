@@ -307,6 +307,7 @@ ion-button {
     background: var(--default-background);
     border-radius: 5px;
     border: 2px solid var(--accent-bright);
+    box-shadow: 0 0 10px 1px var(--accent-color);
     padding: 0 5%;
     margin: 5% 0 0;
     color: var(--text);
@@ -475,6 +476,15 @@ ion-button {
     font-weight: bold;
     color: var(--text);
     --background: var(--accent-color);
+}
+
+#textColor {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    block-size: 2rem;
+    padding: 0;
+    margin: 2rem 0 0;
 }
 
 /* Account page */

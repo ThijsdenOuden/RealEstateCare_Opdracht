@@ -10,9 +10,7 @@
                         <ion-icon name="document-text-outline"></ion-icon>
                         {{ card.header }}
                     </div>
-                    <ion-icon
-                      id="chevronDown"
-                      name="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
                 </ion-card-header>
                 <ion-card-content v-if="card.showContent">
                     {{ card.content }}

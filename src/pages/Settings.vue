@@ -1,22 +1,37 @@
 <template>
     <base-layout pageTitle="Instellingen">
-        <img id="settingsLogo" src="../theme/Logo/logo_full.png" alt="logo">
+        <img
+          id="settingsLogo"
+          src="../theme/Logo/logo_full.png"
+          alt="Real estate care logo">
         <div id="content">
             <ion-card id="settingsCard">
                 <div class="switches">
                     <h4>Dark mode:</h4>
-                    <ion-toggle id="themeSwitch" :enableOnOffLabels="true" :checked="true" @click="toggle"></ion-toggle>
+                    <ion-toggle
+                      id="themeSwitch"
+                      :enableOnOffLabels="true"
+                      :checked="true"
+                      @click="toggle"></ion-toggle>
                 </div>
                 <div class="switches">
                     <h4>Geluiden:</h4>
-                    <ion-toggle :enableOnOffLabels="true" :checked="false"></ion-toggle>
+                    <ion-toggle
+                      :enableOnOffLabels="true"
+                      :checked="false"></ion-toggle>
                 </div>
                 <div class="switches">
                     <h4>Notificaties:</h4>
-                    <ion-toggle :enableOnOffLabels="true" :checked="true"></ion-toggle>
+                    <ion-toggle
+                      :enableOnOffLabels="true"
+                      :checked="true"></ion-toggle>
                 </div>
             </ion-card>
-            <ion-button @click="logout" id="logoutBtn">Log uit</ion-button>
+            <ion-button
+              @click="logout"
+              id="logoutBtn">Log
+              uit</ion-button>
+            <p id="textColor">Voor vragen en/of contact kunt u mailen naar: developers@rec.com</p>
         </div>
     </base-layout>
 </template>

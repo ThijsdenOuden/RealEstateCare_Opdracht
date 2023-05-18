@@ -2,7 +2,10 @@
     <ion-page>
         <div class="login">
             <ion-card id="loginCard">
-                <img id="loginLogo" src="../theme/Logo/logo_full.png" alt="logo">
+                <img
+                  id="loginLogo"
+                  src="../theme/Logo/logo_full.png"
+                  alt="Real estate care logo">
                 <ion-card-header class="loginHeader">
                     <h2>Log in</h2>
                 </ion-card-header>
@@ -15,7 +18,10 @@
                       type="password"
                       v-model="password"
                       placeholder="Wachtwoord"></ion-input>
-                    <ion-button @click="login" class="loginBtn">Log in</ion-button>
+                    <ion-button
+                      @click="login"
+                      class="loginBtn">Log
+                      in</ion-button>
                 </ion-card-content>
             </ion-card>
         </div>

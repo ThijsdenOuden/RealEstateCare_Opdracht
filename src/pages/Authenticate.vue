@@ -2,13 +2,23 @@
     <ion-page>
         <div class="login">
             <ion-card id="authCard">
-                <img id="loginLogo" src="../theme/Logo/logo_full.png" alt="logo">
+                <img
+                  id="loginLogo"
+                  src="../theme/Logo/logo_full.png"
+                  alt="Real estate care logo">
                 <ion-card-header class="loginHeader">
                     <h2>Verificatie</h2>
                 </ion-card-header>
                 <ion-card-content class="authInput">
-                    <ion-input  type="number" v-model="authentication" placeholder="Authenticatie nummer" ></ion-input>
-                    <ion-button @click="authenticate" class="loginBtn">Log in</ion-button>
+                    <ion-input
+                      type="number"
+                      v-model="authentication"
+                      placeholder="Authenticatie nummer"
+                      ></ion-input>
+                    <ion-button
+                      @click="authenticate"
+                      class="loginBtn">Log
+                      in</ion-button>
                 </ion-card-content>
             </ion-card>
         </div>

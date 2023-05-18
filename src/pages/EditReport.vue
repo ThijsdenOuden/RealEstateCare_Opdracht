@@ -1,6 +1,9 @@
 <template>
     <base-layout pageTitle="Aanpassen">
-        <ion-spinner v-if="loading" name="circular" id="spinner"></ion-spinner>
+        <ion-spinner
+          v-if="loading"
+          name="circular"
+          id="spinner"></ion-spinner>
         <section class="contentOverflow">
             <form class="assignForm">
                 <div class="formHeader">
@@ -20,9 +23,15 @@
                     </div>
                     <div class="input">
                         <label for="property_date">Datum:</label>
-                        <input type="date" id="property_date" v-model="report.date_inspection" required />
+                        <input
+                          type="date"
+                          id="property_date"
+                          v-model="report.date_inspection"
+                          required />
                     </div>
-                    <input type="hidden" v-model="report.report_completed">
+                    <input
+                      type="hidden"
+                      v-model="report.report_completed">
                 </div>
                 <damageReport />
                 <maintenanceReport />
