@@ -70,7 +70,11 @@ Zo is bijvoorbeeld ook de "Split HTML Attributes (Vue, React, Angular)" extentio
 
 
 **Slot:**
-Er is hard gewerkt om de applicatie mooi, toegankelijk, gebruikersvriendelijk en snel te maken naast dat alle criteria van de case gewaarborgd zijn. Mochten er vragen zijn dan kunt u altijd even mailen naar:
+Er is hard gewerkt om de applicatie mooi, toegankelijk, gebruikersvriendelijk en snel te maken naast dat alle criteria van de case gewaarborgd zijn. 
+
+Verbeterpunt: Door de imitaties van de JsonBin.io Update Bins API kan alleen het gehele JSON bestand geüpdatet worden i.p.v. delen van het JSON bestand. Hier is een omweg voor gevonden maar voor de definitieve versie zou er gekeken moeten worden naar een andere API met meer opties.
+
+Mochten er vragen zijn dan kunt u altijd even mailen naar:
 
     ThijsdenOuden@outlook.com
 
