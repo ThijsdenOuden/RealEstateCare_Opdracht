@@ -70,9 +70,9 @@ export default {
                     },
                 });
                 
-                if (result.status == 200 && result.data.record) {
+                if (result.status == 200 && result.data.record[0]) {
                 const randomNumber = Math.floor(Math.random() * (100000 - 10000)) + 10000;
-                console.log(randomNumber);
+                console.log(randomNumber); //So you can find the number if you miss it without logging in again
 
                 localStorage.setItem('Authentication', randomNumber);
                 sessionStorage.setItem('Login', true);
